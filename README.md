@@ -8,7 +8,8 @@
 * Upadting cafes
 
 ### Issues
-* Having problem with re-odering the cafes after performing operations
+* Having problem with re-odering the cafes after performing operations.
+* When their is no network connection then stop tsaking snapshot form firestore.
 
 ## Help
 * Any kind of help and consideration is highly motivated.
