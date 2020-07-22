@@ -1,0 +1,74 @@
+<html>
+    <head>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Custom style sheet -->
+		<link rel="stylesheet" href="firestore.css">
+    </head>
+    <body>
+
+        <h1>Cloud Cafe</h1>
+
+        <div class="content">
+            <form id="add-cafe-form" action="">
+				<input type="text" name="name" id="cafe-name" placeholder="Cafe Name" autocomplete="off" required>
+				<input type="text" name="country" id="cafe-city" placeholder="Cafe City" autocomplete="off" required>
+				<button type="submit">Add Cafe</button>
+			</form>
+
+            <ul id="cafe-list"></ul>
+		</div>
+
+		<!-- Modal Trigger -->
+		<a class="waves-effect waves-light btn modal-trigger" href="#modal1">
+			<i class="material-icons">edit</i>
+		</a>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+		  <div class="modal-content">
+			<h4>Modal Header</h4>
+			<p>A bunch of text</p>
+		  </div>
+		  <div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+		  </div>
+		</div>
+		
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+		<!-- Using only firestore properties -->
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+		<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCZEwCSChZPW6ArEJzAGedwIC-kMsUB5QM",
+			authDomain: "fir-firestore-7f648.firebaseapp.com",
+			databaseURL: "https://fir-firestore-7f648.firebaseio.com",
+			projectId: "fir-firestore-7f648",
+			storageBucket: "fir-firestore-7f648.appspot.com",
+			messagingSenderId: "247094067305",
+			appId: "1:247094067305:web:9e9a5d66a917daf3a6a2f8",
+			measurementId: "G-L50S5MBHZG"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		// Getting database reference.
+		const db = firebase.firestore();
+
+		// db.setting( { timestampsInSnapshots: true } );
+		</script>
+
+        <script src="firestore.js"></script>
+    </body>
+</html>
