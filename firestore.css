@@ -7,6 +7,14 @@ body{
     font-family: ubuntu;
 }
 
+button:focus{
+	background-color: initial;
+}
+
+.overflow{
+	overflow: hidden;
+}
+
 h1{
     color: #fff;
     font-size: 64px;
@@ -116,4 +124,69 @@ button{
 
 button:hover{
 	background-color: #f5f5f5  ;
+}
+
+.modal-wrapper{
+	width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100%;
+    background-color: rgba(0,0,0,0.4);
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.open{
+	top: 0;
+	opacity: 1;
+	transition: all 0.2s;
+}
+
+.modal{
+	display: block;
+}
+
+.active{
+	z-index: 1003;
+	display: block;
+	opacity: 1;
+	top: 10%;
+	transform: scaleX(1) scaleY(1);
+	transition: all 0.2s;
+}
+
+.inactive{
+	z-index: 1003;
+	/* display: none; */
+	opacity: 0;
+	top: -20%;
+	transform: scaleX(0.8) scaleY(0.8);
+	transition: all 0.2s;
+}
+
+.modal .modal-footer{
+	padding: 0;
+}
+
+.loader{
+	top: 0;
+	z-index: 1;
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.loader > img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: scale(2.0);
+}
+
+.cancel{
+	position: absolute;
+    top: 5px;
+    right: 5px;
 }

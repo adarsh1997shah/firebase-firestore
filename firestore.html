@@ -23,20 +23,24 @@
             <ul id="cafe-list"></ul>
 		</div>
 
-		<!-- Modal Trigger -->
-		<a class="waves-effect waves-light btn modal-trigger" href="#modal1">
-			<i class="material-icons">edit</i>
-		</a>
+		<div class="loader">
+			<img src="ajax-loader.gif" alt="">
+		</div>
 
 		<!-- Modal Structure -->
-		<div id="modal1" class="modal">
-		  <div class="modal-content">
-			<h4>Modal Header</h4>
-			<p>A bunch of text</p>
-		  </div>
-		  <div class="modal-footer">
-			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-		  </div>
+		<div class="modal-wrapper">
+			<div id="modal" class="edit-cafe modal inactive">
+				<div class="modal-content">
+				<h4>Edit Cafe</h4>
+				<form id="edit-cafe-form" action="">
+					<input type="hidden" name="cafeid" id="cafe-id">
+					<input type="text" name="name" id="cafe-name" placeholder="Cafe Name" autocomplete="off" required>
+					<input type="text" name="country" id="cafe-city" placeholder="Cafe City" autocomplete="off" required>
+					<button type="submit">Save Cafe</button>
+				</form>
+				</div>
+				<div id="edit-cancel" class="cancel waves-effect"><i class="material-icons">cancel</i></div>
+			</div>
 		</div>
 		
 
